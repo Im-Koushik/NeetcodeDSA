@@ -1,6 +1,7 @@
 # 1.Contain duplicate or not in an array
 ## using set approach O(n)
 
+```cpp
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
