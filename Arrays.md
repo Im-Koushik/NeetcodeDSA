@@ -206,5 +206,29 @@ public:
 
 ```
 
+# 9.longest consecutive sequence
 
+## using dp on sorted array. 3 conditions
+
+```cpp
+class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        if(nums.size()==0) return 0;
+        vector<int>v(nums.size(),0);
+        v[0]=1;
+        sort(nums.begin(),nums.end());
+        for(int i=1;i<nums.size();i++){
+            if(nums[i]==1+nums[i-1]){
+                v[i]=1+v[i-1];
+            }
+            else if(nums[i]==nums[i-1]){
+                v[i]=v[i-1];
+            }
+            else v[i]=1;
+        }
+        return *max_element(v.begin(),v.end());
+    }
+};
+```
 
