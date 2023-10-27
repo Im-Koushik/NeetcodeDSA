@@ -1,5 +1,5 @@
-# 1.Contain duplicate or not in an array
-## using set approach O(n)
+### 1.Contain duplicate or not in an array
+#### using set approach O(n)
 
 ```cpp
 class Solution {
